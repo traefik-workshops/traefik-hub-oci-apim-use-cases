@@ -20,6 +20,7 @@ helm upgrade --install \
 --namespace traefik \
 traefik traefik/traefik \
 --reset-then-reuse-values \
+--set "providers.kubernetesCRD.allowCrossNamespace=true" \
 --set "providers.kubernetesCRD.allowExternalNameServices=true"
 
 ```
