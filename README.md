@@ -25,26 +25,6 @@ traefik traefik/traefik \
 
 ```
 
-If you get an error similar to: 
-
-```
-Error: unknown flag: --reset-then-reuse-values
-```
-
-Please use the multi-command approach
-
-```
-
-helm show values traefik/traefik > traefik-values.yaml
-helm upgrade --install \
-  --namespace traefik \
-  traefik traefik/traefik \
-  -f traefik-values.yaml \
-  --set "providers.kubernetesCRD.allowExternalNameServices=true" \
-  --set "providers.kubernetesCRD.allowCrossNamespace=true"
-
-```
-
 ---
 
 ## Example Configuration: Exposing an External API via Traefik with API Plans and Developer Portal
