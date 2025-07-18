@@ -48,7 +48,7 @@ kubectl create namespace apps
 Apply the service that will expose inside OKE the OCI API, change the externalName in the service file by your OCI API domain.
 
 ```bash
-export EXTERNAL_NAME=teamoic3-frrnyzlwrqhn-fr.integration.eu-frankfurt-1.ocp.oraclecloud.com
+export EXTERNAL_NAME=httpbin.org
 envsubst < resources/1-service.yaml | kubectl apply -f -
 ```
 
