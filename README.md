@@ -22,13 +22,6 @@ Lightweight gateway for direct API exposure with JWT authentication.
 
 ---
 
-## Quick Start
-
-### Prerequisites
-- OKE cluster with Traefik installed
-- Access to external OCI APIs
-- OCI Identity Cloud Service
-
 ### Choose Your Path
 - **Full API Management**: Navigate to [`traefik_apim/`](./traefik_apim/README.md)
 - **API Gateway Only**: Navigate to [`traefik_apigateway/`](./traefik_apigateway/README.md)
