@@ -6,5 +6,5 @@ metadata:
 spec:
   plugin:
     jwt:
-      jwksUrl: https://idcs-5ba32fa3496f48289532f8fc10f47032.identity.oraclecloud.com/admin/v1/SigningCert/jwk
+      jwksUrl: ${JWKS_URL}
       forwardAuthorization: true

@@ -26,7 +26,7 @@ helm upgrade --install \
 
 ## Example Configuration: Exposing an External API via Traefik with API Gateway
 
-**All referenced YAML files should be placed in your `/resources` folder in your GitHub repository.**
+**All referenced YAML files are placed in the `/resources` folder in your GitHub repository.**
 
 Replace `<External_IP>` with your Load Balancer IP:
 
@@ -72,21 +72,10 @@ kubectl apply -f resources/3-middleware-stripprefix.yaml
 
 To secure your APIs with JWT authentication using OCI as an identity provider, you need to use your `jwks_uri`, which is found in your IdP's `/.well-known/openid-configuration` endpoint, for example:
 
-```
-https://idcs-5ba32fa3496f48289532f8fc10f47032.identity.oraclecloud.com/admin/v1/SigningCert/jwk
-```
-
 ```bash
-kubectl apply -f resources/4-middleware-jwt.yaml
+export JWKS_URL="https://idcs-5ba32fa3496f48289532f8fc10f47032.identity.oraclecloud.com/admin/v1/SigningCert/jwk"
+envsubst < resources/4-middleware-jwt.yaml | kubectl apply -f -
 ```
-
-#### 1.5 More Middlewares to Test
-
-You can use more middlewares to handle your API traffic like for example:
-
-- Distributed Rate Limiting or Standard Rate Limiting
-- Open Policy Agents
-- Or others
 
 ---
 
@@ -95,7 +84,7 @@ You can use more middlewares to handle your API traffic like for example:
 Test your API with the following curl request:
 
 ```bash
-curl --location -k 'https://<External_IP>/teamoci3/ic/api/integration/v2/flows/rest/project/ORCL-R-REST_ECHO_REQUEST/ORCL-R-SAMPLE_ECHO/1.0/hello' \
+curl --location -k 'https://<External_IP>/teamoci3/' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer <<ADD YOUR TOKEN>>'
 ```
