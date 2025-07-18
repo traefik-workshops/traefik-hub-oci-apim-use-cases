@@ -1,0 +1,23 @@
+apiVersion: hub.traefik.io/v1alpha1
+kind: APICatalogItem
+metadata:
+  name: ociapi-gold-catalog-item
+  namespace: apps
+spec:
+  everyone: true
+  apis:
+    - name: traefik-ociapi-api
+  apiPlan:
+    name: ociapi-gold-plan
+---
+apiVersion: hub.traefik.io/v1alpha1
+kind: APICatalogItem
+metadata:
+  name: ociapi-bronze-catalog-item
+  namespace: apps
+spec:
+  everyone: true
+  apis:
+    - name: traefik-ociapi-api
+  apiPlan:
+    name: ociapi-bronze-plan

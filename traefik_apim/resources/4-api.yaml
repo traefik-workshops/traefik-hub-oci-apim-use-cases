@@ -1,0 +1,13 @@
+apiVersion: hub.traefik.io/v1alpha1
+kind: API
+metadata:
+  name: traefik-ociapi-api
+  namespace: apps
+spec:
+  title: "Traefik ociapi"
+  description: "Traefik ociapi"
+  openApiSpec:
+    url: ${OPENAPI_SPEC_URL}
+    override:
+      servers:
+        - url: ${OVERRIDE_SERVER_URL}

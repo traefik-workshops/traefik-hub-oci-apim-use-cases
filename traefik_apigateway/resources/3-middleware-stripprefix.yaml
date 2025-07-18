@@ -1,0 +1,9 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: stripprefix-teamoci3
+  namespace: apps
+spec:
+  stripPrefix:
+    prefixes:
+      - /teamoci3

@@ -1,0 +1,19 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefik-ociapi-route
+  namespace: apps
+  annotations:
+    hub.traefik.io/api: traefik-ociapi-api@apps
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: PathPrefix(`/ociapi`)
+      services:
+        - name: oci-svc
+          port: 443
+          passHostHeader: false
+      middlewares:
+        - name: stripprefix-ociapi
+          namespace: apps

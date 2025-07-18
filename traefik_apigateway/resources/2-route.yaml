@@ -1,0 +1,17 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefik-teamoci3-route
+  namespace: apps
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: PathPrefix(`/teamoci3`)
+      services:
+        - name: teamoic3-svc
+          port: 443
+          passHostHeader: false
+      middlewares:
+        - name: stripprefix-teamoci3
+        - name: traefik-jwt-authentication
