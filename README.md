@@ -13,13 +13,13 @@ There are different deployment approaches for integrating Traefik with Oracle Cl
 ### 1. **API Management** (`traefik_apim/`)
 Full-featured solution with developer portal, API plans, and catalog management.
 
-**Features:** Developer Portal, API Plans, Catalog Items, SSO, JWT Auth  
+**Features:** Developer Portal, API Plans, Catalog Items, SSO and JWT Auth (more use cases to be added)
 **Use Case:** Complete API management
 
 ### 2. **API Gateway** (`traefik_apigateway/`)
 Lightweight gateway for direct API exposure with JWT authentication.
 
-**Features:** Direct API routing, JWT Auth, Middleware support  
+**Features:** Direct API routing, JWT Auth and Middleware support (more use cases to be added)
 **Use Case:** Simple API gateway without management overhead
 
 ---
