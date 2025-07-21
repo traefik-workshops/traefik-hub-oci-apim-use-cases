@@ -2,6 +2,8 @@
 
 Two deployment approaches for integrating Traefik with Oracle Cloud Infrastructure (OCI) and Oracle Kubernetes Engine (OKE).
 
+![Traefik_Stack](img/Traefik_Stack.png)
+
 > Extends the official documentation: https://doc.traefik.io/traefik-hub/operations/oracle-oci/oci-apim-marketplace
 
 ---

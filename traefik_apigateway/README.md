@@ -81,7 +81,7 @@ envsubst < resources/4-middleware-jwt.yaml | kubectl apply -f -
 
 ## 2. Test Your API
 
-Test your API with the following curl request:
+Get a JWT token using your IdP and test your API with the following curl request:
 
 ```bash
 curl --location -k 'https://<External_IP>/teamoci3/' \
