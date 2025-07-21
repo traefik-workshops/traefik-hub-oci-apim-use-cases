@@ -1,6 +1,6 @@
 # Traefik OCI Integration Repository
 
-Two deployment approaches for integrating Traefik with Oracle Cloud Infrastructure (OCI) and Oracle Kubernetes Engine (OKE).
+There are different deployment approaches for integrating Traefik with Oracle Cloud Infrastructure (OCI) and Oracle Kubernetes Engine (OKE). In this repository we explore different use cases from the [Traefik API Gateway](https://traefik.io/traefik-hub-api-gateway) and [Traefik API Management](https://traefik.io/solutions/api-management) deployed in OKE.
 
 ![Traefik_Stack](img/Traefik_Stack.png)
 
