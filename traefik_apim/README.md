@@ -159,7 +159,7 @@ To secure your APIs with JWT authentication using OCI as an identity provider, y
 
 ```
 
-https://idcs-5ba32fa3496f48289532f8fc10f47032.identity.oraclecloud.com/admin/v1/SigningCert/jwk
+https://idcs-....4447.identity.oraclecloud.com/admin/v1/SigningCert/jwk
 
 ```
 
