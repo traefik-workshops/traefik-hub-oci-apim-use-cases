@@ -73,7 +73,7 @@ kubectl apply -f resources/3-middleware-stripprefix.yaml
 To secure your APIs with JWT authentication using OCI as an identity provider, you need to use your `jwks_uri`, which is found in your IdP's `/.well-known/openid-configuration` endpoint, for example:
 
 ```bash
-export JWKS_URL="https://idcs-5ba32fa3496f48289532f8fc10f47032.identity.oraclecloud.com/admin/v1/SigningCert/jwk"
+export JWKS_URL="https://idcs-....8282.identity.oraclecloud.com/admin/v1/SigningCert/jwk"
 envsubst < resources/4-middleware-jwt.yaml | kubectl apply -f -
 ```
 
