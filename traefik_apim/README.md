@@ -114,7 +114,7 @@ If not, deploy and configure Redis in your cluster and Traefik deployment:
 helm install redis oci://registry-1.docker.io/bitnamicharts/redis -n traefik --wait
 export REDIS_PASSWORD=$(kubectl get secret --namespace traefik redis -o jsonpath="{.data.redis-password}" | base64 -d)
 helm upgrade traefik -n traefik --wait \
-  --reuse-values \
+  --reset-then-reuse-values \
   --set hub.redis.endpoints=redis-master.traefik.svc.cluster.local:6379 \
   --set hub.redis.password=${REDIS_PASSWORD} \
 traefik/traefik
